@@ -6,7 +6,7 @@ import type { ScalarOptions } from '@scalar/docusaurus';
 const config: Config = {
     title: 'Documentation Portal',
     tagline: 'Comprehensive product and API documentation',
-    favicon: 'img/favicon.ico',
+    favicon: 'img/synapsewave.png',
 
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -46,11 +46,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/synapsewave.png',
     navbar: {
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/synapsewave.png',
       },
       items: [
         {

@@ -8,6 +8,13 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: var(--flexoki-paper);
+  color: var(--flexoki-black);
+}
+
+[data-theme='dark'] .heroBanner {
+  background-color: var(--flexoki-black);
+  color: var(--flexoki-paper);
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +27,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.features {
+  padding: 2rem 0;
+  background-color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] .features {
+  background-color: var(--flexoki-black);
 }

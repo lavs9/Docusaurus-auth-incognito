@@ -6,25 +6,173 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+ /* Flexoki Colors */
+ --flexoki-black: #100F0F;
+ --flexoki-black-rgb: 16, 15, 15;
+ --flexoki-paper: #FFFCF0;
+ --flexoki-paper-rgb: 255, 252, 240;
+ 
+ /* UI Colors */
+ --flexoki-50: #F2F0E5;
+ --flexoki-100: #E6E4D9;
+ --flexoki-150: #DAD8CE;
+ --flexoki-200: #CECCC3;
+ --flexoki-300: #B7B5AC;
+ --flexoki-600: #6F6E69;
+
+ /* Theme Colors */
+ --flexoki-red-400: #D14D41;
+ --flexoki-red-600: #AF3029;
+ --flexoki-orange-400: #DA702C;
+ --flexoki-orange-600: #BC5215;
+ --flexoki-yellow-400: #D0A215;
+ --flexoki-yellow-600: #AD8301;
+ --flexoki-green-400: #879A39;
+ --flexoki-green-600: #66800B;
+ --flexoki-cyan-400: #3AA99F;
+ --flexoki-cyan-600: #24837B;
+ --flexoki-blue-400: #4385BE;
+ --flexoki-blue-600: #205EA6;
+ --flexoki-purple-400: #8B7EC8;
+ --flexoki-purple-600: #5E409D;
+ --flexoki-magenta-400: #CE5D97;
+ --flexoki-magenta-600: #A02F6F;
+
+ /* Docusaurus Variables */
+ --ifm-color-primary: var(--flexoki-cyan-600);
+ --ifm-color-primary-dark: var(--flexoki-cyan-600);
+ --ifm-color-primary-darker: var(--flexoki-blue-600);
+ --ifm-color-primary-darkest: var(--flexoki-purple-600);
+ --ifm-color-primary-light: var(--flexoki-cyan-400);
+ --ifm-color-primary-lighter: var(--flexoki-blue-400);
+ --ifm-color-primary-lightest: var(--flexoki-purple-400);
+ --ifm-background-color: var(--flexoki-paper);
+ --ifm-font-color-base: var(--flexoki-black);
+ --ifm-navbar-background-color: var(--flexoki-paper);
+ --ifm-footer-background-color: var(--flexoki-50);
+ --ifm-code-font-size: 95%;
+ --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+ --ifm-font-family-monospace: ui-monospace, SFMono-Regular, "Cascadia Code", "IBM Plex Mono", "Roboto Mono", Menlo, Monaco, monospace;
+ --docusaurus-highlighted-code-line-bg: var(--flexoki-100);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: var(--flexoki-cyan-400);
+  --ifm-color-primary-dark: var(--flexoki-cyan-600);
+  --ifm-color-primary-darker: var(--flexoki-blue-600);
+  --ifm-color-primary-darkest: var(--flexoki-purple-600);
+  --ifm-color-primary-light: var(--flexoki-cyan-400);
+  --ifm-color-primary-lighter: var(--flexoki-blue-400);
+  --ifm-color-primary-lightest: var(--flexoki-purple-400);
+  --ifm-background-color: var(--flexoki-black);
+  --ifm-font-color-base: var(--flexoki-paper);
+  --ifm-navbar-background-color: var(--flexoki-black);
+  --ifm-footer-background-color: var(--flexoki-black);
+  --docusaurus-highlighted-code-line-bg: var(--flexoki-600);
+}
+
+/* Add monospace font for documentation content */
+.markdown {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.card {
+  background-color: var(--flexoki-50);
+  border: 1px solid var(--flexoki-100);
+}
+
+.hero--primary {
+  background-color: var(--flexoki-paper);
+  color: var(--flexoki-black);
+}
+
+.button--primary {
+  background-color: var(--flexoki-cyan-600);
+  border-color: var(--flexoki-cyan-600);
+}
+
+.button--primary:hover {
+  background-color: var(--flexoki-cyan-400);
+  border-color: var(--flexoki-cyan-400);
+}
+
+.button--secondary {
+  background-color: var(--flexoki-100);
+  border-color: var(--flexoki-100);
+  color: var(--flexoki-600);
+}
+
+.button--secondary:hover {
+  background-color: var(--flexoki-150);
+  border-color: var(--flexoki-150);
+  color: var(--flexoki-600);
+}
+
+/* Add these rules */
+.main-wrapper {
+  background-color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] .main-wrapper {
+  background-color: var(--flexoki-black);
+}
+
+/* Ensure content area has proper background */
+main {
+  background-color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] main {
+  background-color: var(--flexoki-black);
+}
+
+/* If there's any white space on sides, this will help */
+#__docusaurus {
+  background-color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] #__docusaurus {
+  background-color: var(--flexoki-black);
+}
+
+[data-theme='dark'] .card {
+  background-color: var(--flexoki-black);
+  border-color: var(--flexoki-600);
+}
+
+[data-theme='dark'] .card__header h3 {
+  color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] .card__body {
+  color: var(--flexoki-100);
+}
+
+[data-theme='dark'] .button--secondary {
+  background-color: var(--flexoki-600);
+  border-color: var(--flexoki-600);
+  color: var(--flexoki-paper);
+}
+
+[data-theme='dark'] .button--secondary:hover {
+  background-color: var(--flexoki-300);
+  border-color: var(--flexoki-300);
 }
